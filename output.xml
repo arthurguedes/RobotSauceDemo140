@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-01T02:33:02.782671" rpa="false" schemaversion="5">
+<suite id="s1" name="Selecionar Produto Po" source="c:\Iterasys\RobotSauceDemo140\tests\web\selecionar_produto_po.robot">
+<test id="s1-t1" name="Selecionar Mochila" line="8">
+<kw name="Abrir navegador" owner="base_page" type="SETUP">
+<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:03.102828" level="INFO">Tirar Screenshot will be run on failure.</msg>
+<arg>Tirar Screenshot</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<status status="PASS" start="2024-06-01T02:33:03.102828" elapsed="0.009619"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:03.112447" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-01T02:33:03.112447" elapsed="2.827071"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-01T02:33:05.940754" elapsed="0.048612"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10000ms</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-06-01T02:33:05.989366" elapsed="0.002110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.login_logo</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-01T02:33:05.991476" elapsed="0.039916"/>
+</kw>
+<status status="PASS" start="2024-06-01T02:33:03.102828" elapsed="2.928564"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.039036" level="INFO">${date} = 2024-06-01 02:33:06.039</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.037855" elapsed="0.003810"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.046173" level="INFO">${date} = 2024.06.01_02.33.06</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.041665" elapsed="0.004508"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.191645" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/1-Home.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/1-Home.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-01T02:33:06.191645" level="INFO">c:\Iterasys\RobotSauceDemo140\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:822: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  return self.get_screenshot_as_file(filename)</msg>
+<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.046173" elapsed="0.145472"/>
+</kw>
+<arg>1-Home</arg>
+<status status="PASS" start="2024-06-01T02:33:06.031392" elapsed="0.160253"/>
+</kw>
+<kw name="Preencher usuario" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.197499" level="INFO">Typing text 'standard_user' into text field 'css=[data-test="username"]'.</msg>
+<arg>${txt_usuario}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.197499" elapsed="0.176549"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2024-06-01T02:33:06.191645" elapsed="0.183857"/>
+</kw>
+<kw name="Preencher senha" owner="login_page">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.375502" level="INFO">Typing password into text field 'css=[data-test="password"]'.</msg>
+<msg time="2024-06-01T02:33:06.406340" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${txt_senha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.375502" elapsed="0.137026"/>
+</kw>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2024-06-01T02:33:06.375502" elapsed="0.137026"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.512528" level="INFO">${date} = 2024-06-01 02:33:06.513</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.512528" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.512528" level="INFO">${date} = 2024.06.01_02.33.06</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.512528" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.613001" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/2-Login%20Preenchido.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/2-Login%20Preenchido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.512528" elapsed="0.107317"/>
+</kw>
+<arg>2-Login Preenchido</arg>
+<status status="PASS" start="2024-06-01T02:33:06.512528" elapsed="0.107628"/>
+</kw>
+<kw name="Clicar no botao login" owner="login_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.621731" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${btn_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.621731" elapsed="0.192631"/>
+</kw>
+<status status="PASS" start="2024-06-01T02:33:06.621731" elapsed="0.192631"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:06.822559" level="INFO">Verifying element 'css=.title' contains exact text 'Products'.</msg>
+<arg>${titulo_secao}</arg>
+<arg>Products</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.821551" elapsed="0.042504"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.864055" level="INFO">${date} = 2024-06-01 02:33:06.864</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.864055" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-01T02:33:06.864055" level="INFO">${date} = 2024.06.01_02.33.06</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.864055" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.032247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/3-Lista%20de%20Produtos.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.06.01_02.33.06/3-Lista%20de%20Produtos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-01T02:33:06.864055" elapsed="0.168192"/>
+</kw>
+<arg>3-Lista de Produtos</arg>
+<status status="PASS" start="2024-06-01T02:33:06.864055" elapsed="0.168192"/>
+</kw>
+<kw name="Clicar no produto" owner="inventory_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.035752" level="INFO">Clicking element 'css=img[alt="Sauce Labs Backpack"]'.</msg>
+<arg>css=img[alt="${product_name}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.035752" elapsed="0.110870"/>
+</kw>
+<arg>Sauce Labs Backpack</arg>
+<status status="PASS" start="2024-06-01T02:33:07.035752" elapsed="0.110870"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.146622" level="INFO">Verifying element 'css=div.inventory_details_name.large_size' contains exact text 'Sauce Labs Backpack'.</msg>
+<arg>${inventory_item_product_name}</arg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.146622" elapsed="0.037831"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.184453" level="INFO">Verifying element 'css=div.inventory_details_price' contains exact text '$29.99'.</msg>
+<arg>${inventory_item_product_price}</arg>
+<arg>$29.99</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.184453" elapsed="0.088154"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-01T02:33:07.275002" level="INFO">${date} = 2024-06-01 02:33:07.275</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.275002" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-01T02:33:07.275002" level="INFO">${date} = 2024.06.01_02.33.07</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.275002" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.394635" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.06.01_02.33.07/4-Detalhes%20do%20produto.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.06.01_02.33.07/4-Detalhes%20do%20produto.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.275002" elapsed="0.125717"/>
+</kw>
+<arg>4-Detalhes do produto</arg>
+<status status="PASS" start="2024-06-01T02:33:07.275002" elapsed="0.125717"/>
+</kw>
+<kw name="Clicar no botao &quot;Add to cart&quot;" owner="inventory_item_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.403064" level="INFO">Clicking button 'css=button.btn.btn_primary.btn_small.btn_inventory'.</msg>
+<arg>${btn_add_to_cart}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.403064" elapsed="0.141769"/>
+</kw>
+<status status="PASS" start="2024-06-01T02:33:07.401737" elapsed="0.143096"/>
+</kw>
+<kw name="Clicar no carrinho" owner="base_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.544833" level="INFO">Clicking element 'css=[data-test="shopping-cart-link"]'.</msg>
+<arg>css=[data-test="shopping-cart-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.544833" elapsed="0.067064"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>css=[data-test="title"]</arg>
+<arg>Your Cart</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.611897" elapsed="0.030869"/>
+</kw>
+<status status="PASS" start="2024-06-01T02:33:07.544833" elapsed="0.097933"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.642766" level="INFO">Verifying element 'css=.title' contains exact text 'Your Cart'.</msg>
+<arg>${titulo_secao}</arg>
+<arg>Your Cart</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.642766" elapsed="0.018990"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.661756" level="INFO">Verifying element 'css=div.inventory_item_name' contains exact text 'Sauce Labs Backpack'.</msg>
+<arg>${cart_product_name}</arg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.661756" elapsed="0.021388"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.683144" level="INFO">Verifying element 'css=div.inventory_item_price' contains exact text '$29.99'.</msg>
+<arg>${cart_product_price}</arg>
+<arg>$29.99</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.683144" elapsed="0.028312"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.711456" level="INFO">Verifying element 'css=div.cart_quantity' contains exact text '1'.</msg>
+<arg>${cart_product_quantity}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.711456" elapsed="0.022168"/>
+</kw>
+<kw name="Tirar Screenshot" owner="base_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-06-01T02:33:07.733624" level="INFO">${date} = 2024-06-01 02:33:07.734</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.733624" elapsed="0.000000"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-06-01T02:33:07.740631" level="INFO">${date} = 2024.06.01_02.33.07</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.733624" elapsed="0.007098"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.822702" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.06.01_02.33.07/5-Carrinho.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.06.01_02.33.07/5-Carrinho.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-01T02:33:07.740835" elapsed="0.081867"/>
+</kw>
+<arg>5-Carrinho</arg>
+<status status="PASS" start="2024-06-01T02:33:07.733624" elapsed="0.089078"/>
+</kw>
+<kw name="Realizar Logout" owner="base_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-01T02:33:07.822702" level="INFO">Clicking button 'id=react=burger-menu-btn'.</msg>
+<kw name="Tirar Screenshot" owner="base_page">
+<msg time="2024-06-01T02:33:27.966511" level="FAIL">Keyword 'base_page.Tirar Screenshot' expected 1 argument, got 0.</msg>
+<status status="FAIL" start="2024-06-01T02:33:27.966511" elapsed="0.000000">Keyword 'base_page.Tirar Screenshot' expected 1 argument, got 0.</status>
+</kw>
+<msg time="2024-06-01T02:33:27.966511" level="WARN">Keyword 'Tirar Screenshot' could not be run on failure: Keyword 'base_page.Tirar Screenshot' expected 1 argument, got 0.</msg>
+<msg time="2024-06-01T02:33:27.973816" level="FAIL">Button with locator 'id=react=burger-menu-btn' not found.</msg>
+<arg>id=react=burger-menu-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-01T02:33:07.822702" elapsed="20.157244">Button with locator 'id=react=burger-menu-btn' not found.</status>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-01T02:33:27.979946" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.login_logo</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-01T02:33:27.979946" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-01T02:33:07.822702" elapsed="20.157244">Button with locator 'id=react=burger-menu-btn' not found.</status>
+</kw>
+<kw name="Fechar navegador" owner="base_page" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-01T02:33:28.480559" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-01T02:33:27.979946" elapsed="0.500613"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-01T02:33:28.480559" elapsed="2.635016"/>
+</kw>
+<status status="PASS" start="2024-06-01T02:33:27.979946" elapsed="3.135629"/>
+</kw>
+<status status="FAIL" start="2024-06-01T02:33:03.102828" elapsed="28.016474">Button with locator 'id=react=burger-menu-btn' not found.</status>
+</test>
+<status status="FAIL" start="2024-06-01T02:33:02.790724" elapsed="28.335219"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Selecionar Produto Po">Selecionar Produto Po</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-01T02:33:27.966511" level="WARN">Keyword 'Tirar Screenshot' could not be run on failure: Keyword 'base_page.Tirar Screenshot' expected 1 argument, got 0.</msg>
+</errors>
+</robot>

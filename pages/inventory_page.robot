@@ -7,6 +7,6 @@ ${titulo_secao}    css=.title
 *** Keywords ***
 Clicar no produto
     [Arguments]    ${product_name}
-    ${imagem_produto}    css=img[alt="${product_name}"]
+    Click Element    css=img[alt="${product_name}"]
     
 
