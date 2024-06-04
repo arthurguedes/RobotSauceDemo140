@@ -1,0 +1,65 @@
+Testes Mobile
+
+O que são aplicações Mobile ? 
+    - app - aplicativos para smartphones (Android e IOS)
+    - tablets 
+    - smartvs
+    - sistemas embarcados em veiculos (GPS/ AV)
+    - sistemas embarcados em eletrodomésticos 
+    - smartwatches
+    - smartbands
+    - smartwear (vestiveis)
+
+Tipos de desenvolvimento / aplicativos mobile 
+    - web app : Falso Aplicativo - site formatado como se fosse um app 
+    - nativo : feito sob medida para o Android ou IOS 
+    - hibrido : um time trabalha em um projeto que produz os 2 Apps 
+
+O tempo de automação para testes mobile acaba sendo 30% a 50% maior 
+o que demora é a configuração inicial e o mapeamento
+
+Os testes automatizados podem ser realizados :
+    - Localmente:
+        --> Conectar o celular no computador via cabo USB (Ativar o modo desenvolvedor/Autorizar)
+        --> Emulador
+            - Remoto:
+                - Aparelhos fisicos
+                - Emuladores 
+
+computador ou notebook ideal 
+    - I5 ou superior , 10 geração ou superior
+    - Memória RAM: 16 GB 
+    - HD : SSD 500 GB
+
+
+Configuração inicial 
+    - Cenario do teste remoto
+
+1 - Escolher um fornecedor e criar uma conta (www.saucelabs.com.br)
+2 - Download e Upload de um apk info
+3 - Upload do aplicativo no site 
+4 - Selecionar um emulador ou aparelho e subir os 2 Apps
+5 - Vamos usar o Apk info para descobrir:
+    -appProject
+    -appActivity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
